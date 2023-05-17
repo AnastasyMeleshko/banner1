@@ -235,3 +235,49 @@ div {
         transform: rotate(360deg) scale(1);
     }
 }
+
+/********************** Animation of button appearing  **********************/
+
+#cta {
+    opacity: 0;
+    animation: slide-up 0.5s ease forwards;
+    animation-delay: 2s;
+    overflow: hidden;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #ffffff, transparent);
+    opacity: 1;
+    animation: sparkle 3s infinite;
+    transition: opacity 1s;
+}
+
+@keyframes sparkle {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
