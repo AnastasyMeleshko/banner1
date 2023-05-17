@@ -14,7 +14,6 @@ div {
 }
 
 
-
 #wrapper {
     display: block;
     top: 10%;
@@ -136,7 +135,7 @@ div {
 
 /********************** Animation of text   **********************/
 
-#frame1 {
+#wrapper #frame1 {
     opacity: 0;
     animation-name: text-animation;
     animation-duration: 12s;
@@ -144,7 +143,7 @@ div {
     animation-fill-mode: forwards;
 }
 
-#frame1 span.blue {
+#wrapper #frame1 span.blue {
     color: #ffffff;
     animation-name: highlight-blue;
     animation-duration: 3s;
@@ -174,11 +173,8 @@ div {
     }
 }
 
-#frame2 {
+#wrapper #frame2 {
     display: none;
-}
-
-#frame2 {
     opacity: 0;
     animation-name: text-animation2;
     animation-duration: 12s;
@@ -186,7 +182,7 @@ div {
     animation-fill-mode: forwards;
 }
 
-#frame2 span.blue {
+#wrapper #frame2 span.blue {
     color: #ffffff;
     animation-name: highlight-blue2;
     animation-duration: 3s;
@@ -216,7 +212,7 @@ div {
 
 /********************** Animation of logo   **********************/
 
-#logo {
+#wrapper #logo {
     animation: rotate-scale 3s ease-in-out;
 }
 
@@ -234,7 +230,7 @@ div {
 
 /********************** Animation of button appearing  **********************/
 
-#cta {
+#wrapper #cta {
     opacity: 0;
     animation: slide-up 0.5s ease forwards;
     animation-delay: 2s;
@@ -252,7 +248,7 @@ div {
     }
 }
 
-#cta::before {
+#wrapper #cta::before {
     content: "";
     position: absolute;
     top: 0;

@@ -28,3 +28,18 @@ window.addEventListener('load', function() {
     },2000)
 });
 
+//Infinite animations for banner due to simulation of reloading the page
+
+function reloadPage() {
+    setTimeout(() => {
+        location.reload();
+    }, 15000);
+}
+
+function startReload() {
+    setInterval(() => {
+        reloadPage();
+    }, 5000);
+}
+
+startReload();
